@@ -4,7 +4,7 @@ NUM_FIGHTS = 1
 VERBOSE = True
 
 MontanaTemplate = {'name': 'Montana', 'hp': 14, 'ac': 5, 'thac0': 18, 'dmgnum': 1, 'dmgsize':6, 'dmgmod': 0}
-bobTemplate   = {'name': 'Bob',   'hp': 12, 'ac': 7, 'thac0': 16, 'dmgnum': 2, 'dmgsize':4, 'dmgmod': 0}
+DustinTemplate   = {'name': 'Dustin',   'hp': 12, 'ac': 7, 'thac0': 16, 'dmgnum': 2, 'dmgsize':4, 'dmgmod': 0}
 
 def display(s):
     if VERBOSE:
@@ -22,26 +22,27 @@ def attack(attacker, defender):
         display('%s misses %s.' % (attacker['name'], defender['name']))
 
 MontanaWins = 0
-bobWins = 0
+DustinWins = 0
 for i in range(NUM_FIGHTS):
     display('======================')
     display('Start of combat #%s' % (i+1))
     Montana = copy.deepcopy(MontanaTemplate)
-    bob = copy.deepcopy(bobTemplate)
+    Dustin = copy.deepcopy(DustinTemplate)
     while True:
-        attack(Montana, bob)
-        if bob['hp'] <= 0:
+        attack(Montana, Dustin)
+        if Dustin['hp'] <= 0:
             break
 
-        attack(bob, Montana)
+        attack(Dustin, Montana)
         if Montana['hp'] <= 0:
             break
     if Montana['hp'] <= 0:
         display('Montana has died.')
-        bobWins += 1
-    if bob['hp'] <= 0:
-        display('Bob has died.')
+        DustinWins += 1
+    if Dustin['hp'] <= 0:
+        display('Dustin has died.')
         MontanaWins += 1
 
 print()
-print('Montana won %s (%s%%) fights. Bob won %s (%s%%) fights.' % (MontanaWins, round(MontanaWins / NUM_FIGHTS * 100, 2), bobWins, round(bobWins / NUM_FIGHTS * 100, 2)))
+print('Montana won %s (%s%%) fights. Dustin won %s (%s%%) fights.' % (MontanaWins, round(MontanaWins / NUM_FIGHTS * 100, 2), Wins, round(DustinWins / NUM_FIGHTS * 100Dustin, 2)))
+
