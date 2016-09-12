@@ -3,7 +3,6 @@ import random, copy
 NUM_FIGHTS = 1
 VERBOSE = True
 
-# Lower thac0 and lower ac values are better. Higher damage & hp values are better.
 MontanaTemplate = {'name': 'Montana', 'hp': 14, 'ac': 5, 'thac0': 18, 'dmgnum': 1, 'dmgsize':6, 'dmgmod': 0}
 bobTemplate   = {'name': 'Bob',   'hp': 12, 'ac': 7, 'thac0': 16, 'dmgnum': 2, 'dmgsize':4, 'dmgmod': 0}
 
