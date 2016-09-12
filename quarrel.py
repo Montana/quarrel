@@ -26,8 +26,8 @@ dustinWins = 0
 for i in range(NUM_FIGHTS):
     display('======================')
     display('Start of combat #%s' % (i+1))
-    Montana = copy.deepcopy(montanaTemplate)
-    Dustin = copy.deepcopy(dustinTemplate)
+    m = copy.deepcopy(montanaTemplate)
+    dustin = copy.deepcopy(dustinTemplate)
     while True:
         attack(montana, dustin)
         if Dustin['hp'] <= 0:
