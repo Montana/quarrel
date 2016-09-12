@@ -12,6 +12,6 @@ python quarrel.py
 
 You should then see something like this, it is randomized, so Dustin or myself may or may not win. 
 
-<img src="https://github.com/Montana/quarrel.git"/> 
+<img src="http://www.grapesoda.org/quarrel.png"/> 
 
 Have fun.
