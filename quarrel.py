@@ -1,6 +1,4 @@
 import random, copy
-import cred 
-import props
 
 NUM_FIGHTS = 1
 VERBOSE = True
