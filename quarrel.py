@@ -44,5 +44,5 @@ for i in range(NUM_FIGHTS):
         montanaWins += 1
 
 print()
-print('montana won %s (%s%%) fights. Dustin won %s (%s%%) fights.' % (montanaWins, round(montanaWins / NUM_FIGHTS * 100, 2), Wins, round(dustinWins / NUM_FIGHTS * 100dustin, 2)))
+print('montana won %s (%s%%) fights. Dustin won %s (%s%%) fights.' % (montanaWins, round(montanaWins / NUM_FIGHTS * 100, 2), Wins, round(dustinWins / NUM_FIGHTS * 100, 2)))
 
