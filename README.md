@@ -1,5 +1,5 @@
 # quarrel
-Simple fighting game script in Python 
+Simple fighting game script in Python. Dustin vs Montana.
 # Usage
 ```
 chmod u+x quarrel.py 
