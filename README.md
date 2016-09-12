@@ -20,4 +20,4 @@ You should then see something like this, it is randomized, so Dustin or myself m
 
 <img src="http://www.grapesoda.org/quarrel.png"/> 
 
-Have fun.
+Happy quarreling. 
