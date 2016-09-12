@@ -3,8 +3,8 @@ import random, copy
 NUM_FIGHTS = 1
 VERBOSE = True
 
-MontanaTemplate = {'name': 'Montana', 'hp': 14, 'ac': 5, 'thac0': 18, 'dmgnum': 1, 'dmgsize':6, 'dmgmod': 0}
-DustinTemplate   = {'name': 'Dustin',   'hp': 12, 'ac': 7, 'thac0': 16, 'dmgnum': 2, 'dmgsize':4, 'dmgmod': 0}
+montanaTemplate = {'name': 'Montana', 'hp': 14, 'ac': 5, 'thac0': 18, 'dmgnum': 1, 'dmgsize':6, 'dmgmod': 0}
+dustinTemplate   = {'name': 'Dustin',   'hp': 12, 'ac': 7, 'thac0': 16, 'dmgnum': 2, 'dmgsize':4, 'dmgmod': 0}
 
 def display(s):
     if VERBOSE:
@@ -21,28 +21,28 @@ def attack(attacker, defender):
     else:
         display('%s misses %s.' % (attacker['name'], defender['name']))
 
-MontanaWins = 0
-DustinWins = 0
+montanaWins = 0
+dustinWins = 0
 for i in range(NUM_FIGHTS):
     display('======================')
     display('Start of combat #%s' % (i+1))
-    Montana = copy.deepcopy(MontanaTemplate)
-    Dustin = copy.deepcopy(DustinTemplate)
+    Montana = copy.deepcopy(montanaTemplate)
+    Dustin = copy.deepcopy(dustinTemplate)
     while True:
-        attack(Montana, Dustin)
+        attack(montana, dustin)
         if Dustin['hp'] <= 0:
             break
 
-        attack(Dustin, Montana)
+        attack(dustin, montana)
         if Montana['hp'] <= 0:
             break
-    if Montana['hp'] <= 0:
-        display('Montana has died.')
-        DustinWins += 1
-    if Dustin['hp'] <= 0:
+    if montana['hp'] <= 0:
+        display('montana has died.')
+        dustinWins += 1
+    if dustin['hp'] <= 0:
         display('Dustin has died.')
-        MontanaWins += 1
+        montanaWins += 1
 
 print()
-print('Montana won %s (%s%%) fights. Dustin won %s (%s%%) fights.' % (MontanaWins, round(MontanaWins / NUM_FIGHTS * 100, 2), Wins, round(DustinWins / NUM_FIGHTS * 100Dustin, 2)))
+print('montana won %s (%s%%) fights. Dustin won %s (%s%%) fights.' % (montanaWins, round(montanaWins / NUM_FIGHTS * 100, 2), Wins, round(dustinWins / NUM_FIGHTS * 100dustin, 2)))
 
