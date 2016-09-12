@@ -3,6 +3,7 @@ import random, copy
 NUM_FIGHTS = 1
 VERBOSE = True
 
+# Lower thac0 and lower ac values are better. Higher damage & hp values are better.
 montanaTemplate = {'name': 'Montana', 'hp': 14, 'ac': 5, 'thac0': 18, 'dmgnum': 1, 'dmgsize':6, 'dmgmod': 0}
 dustinTemplate   = {'name': 'Dustin',   'hp': 12, 'ac': 7, 'thac0': 16, 'dmgnum': 2, 'dmgsize':4, 'dmgmod': 0}
 
@@ -26,23 +27,22 @@ dustinWins = 0
 for i in range(NUM_FIGHTS):
     display('======================')
     display('Start of combat #%s' % (i+1))
-    m = copy.deepcopy(montanaTemplate)
+    montana = copy.deepcopy(montanaTemplate)
     dustin = copy.deepcopy(dustinTemplate)
     while True:
         attack(montana, dustin)
-        if Dustin['hp'] <= 0:
+        if dustin['hp'] <= 0:
             break
 
         attack(dustin, montana)
-        if Montana['hp'] <= 0:
+        if montana['hp'] <= 0:
             break
     if montana['hp'] <= 0:
-        display('montana has died.')
+        display('Montana has died.')
         dustinWins += 1
     if dustin['hp'] <= 0:
         display('Dustin has died.')
         montanaWins += 1
 
 print()
-print('montana won %s (%s%%) fights. Dustin won %s (%s%%) fights.' % (montanaWins, round(montanaWins / NUM_FIGHTS * 100, 2), Wins, round(dustinWins / NUM_FIGHTS * 100, 2)))
-
+print('Montana won %s (%s%%) fights. Dustin won %s (%s%%) fights.' % (montanaWins, round(montanaWins / NUM_FIGHTS * 100, 2), dustinWins, round(dustinWins / NUM_FIGHTS * 100, 2)))
