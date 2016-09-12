@@ -8,6 +8,8 @@ Open your terminal, make sure you make quarrel executable, and of course you hav
 git clone https://github.com/Montana/quarrel.git
 ```
 
+Once the repo has been cloned, you can now run quarrel via: 
+
 ```
 chmod u+x quarrel.py 
 python
