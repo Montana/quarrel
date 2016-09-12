@@ -2,14 +2,13 @@
 Simple text based fighting game written in Python. Dustin vs Montana.
 # Usage
 
-Open your terminal, make sure you make quarrel executable, and of course you have Python installed. Clone the repo:
+First clone the repo
 
 ```
 git clone https://github.com/Montana/quarrel.git
 ```
 
-Once the repo has been cloned, you can now run quarrel via: 
-
+Once the repo is cloned, make quarrel executable, and of course make sure you have Python installed
 ```
 chmod u+x quarrel.py 
 python
