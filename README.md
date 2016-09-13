@@ -15,7 +15,7 @@ python
 python quarrel.py
 ```
 
-You should then see something like this, it is randomized, so Dustin or myself may or may not win. 
+You should then see something like this, it is randomized, so Dustin or myself may or may not win
 
 <img src="http://www.grapesoda.org/quarrel.png"/> 
 
